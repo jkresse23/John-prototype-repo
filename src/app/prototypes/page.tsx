@@ -3,6 +3,11 @@ import Link from 'next/link'
 // Add your prototypes here - each entry creates a link on this page
 const prototypes = [
   {
+    slug: 'reading-tracker',
+    title: '📚 Kids Reading Tracker',
+    description: 'Track daily reading time and books for young readers',
+  },
+  {
     slug: 'button-demo',
     title: 'Button Demo',
     description: 'A simple button component showcase',
