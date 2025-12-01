@@ -3,6 +3,11 @@ import Link from 'next/link'
 // Add your prototypes here - each entry creates a link on this page
 const prototypes = [
   {
+    slug: 'cash-advance',
+    title: '💵 Cash Advance',
+    description: 'Cash advance flow with eligibility, amount selection, and repayment confirmation',
+  },
+  {
     slug: 'reading-tracker',
     title: '📚 Kids Reading Tracker',
     description: 'Track daily reading time and books for young readers',

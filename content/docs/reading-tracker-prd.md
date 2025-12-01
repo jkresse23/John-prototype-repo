@@ -164,3 +164,4 @@ Current alternatives:
 2. What's the right default daily goal? (15 min? 20 min?)
 3. Do we need parent vs. child modes?
 
+

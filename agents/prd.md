@@ -110,3 +110,4 @@ When a user asks you to write a PRD, gather this information first:
 
 Then produce a complete PRD following the structure above.
 
+
