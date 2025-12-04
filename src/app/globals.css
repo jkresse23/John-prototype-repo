@@ -3,14 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --accent: #00d9ff;
-  --accent-dim: #00a8c7;
-  --surface: #141414;
-  --surface-hover: #1f1f1f;
-  --border: #2a2a2a;
-  --text-muted: #888;
+  /* Zip Design System Colors */
+  --background: #F5F3FF;
+  --foreground: #1A1A1A;
+  --accent: #8660FF;
+  --accent-dim: #6D40FF;
+  --accent-hover: #9F80FF;
+  --surface: #FFFFFF;
+  --surface-hover: #E8E0FF;
+  --surface-light: #F5F3FF;
+  --border: #E8E0FF;
+  --text-muted: #666666;
+  --text-tertiary: #999999;
 }
 
 body {
@@ -59,7 +63,7 @@ body {
 
 .markdown-body p {
   margin-bottom: 1rem;
-  color: #ccc;
+  color: var(--foreground);
 }
 
 .markdown-body ul, .markdown-body ol {
@@ -69,7 +73,7 @@ body {
 
 .markdown-body li {
   margin-bottom: 0.5rem;
-  color: #ccc;
+  color: var(--foreground);
 }
 
 .markdown-body ul {
@@ -81,7 +85,7 @@ body {
 }
 
 .markdown-body code {
-  background: var(--surface);
+  background: var(--surface-light);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-size: 0.9em;
@@ -140,7 +144,7 @@ body {
 }
 
 .markdown-body th {
-  background: var(--surface);
+  background: var(--surface-light);
   font-weight: 600;
 }
 

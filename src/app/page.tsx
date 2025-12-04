@@ -18,7 +18,7 @@ export default async function Home() {
         {/* Recent Documents */}
         <section>
           <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Documents</h2>
+            <h2 className="text-xl font-semibold">PRDs</h2>
             <Link href="/docs" className="text-sm text-[var(--accent)] hover:underline">
               View all →
             </Link>
@@ -74,13 +74,13 @@ export default async function Home() {
                 <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <h3 className="font-semibold">Adding Documents</h3>
+                <h3 className="font-semibold">Adding PRDs</h3>
               </div>
               <ol className="text-sm text-[var(--text-muted)] space-y-2 list-decimal list-inside">
                 <li>Create a <code className="text-[var(--accent)]">.md</code> file in <code className="text-[var(--accent)]">content/docs/</code></li>
                 <li>Add frontmatter at the top for metadata:</li>
               </ol>
-              <pre className="mt-3 p-3 bg-[#0d0d0d] rounded-lg text-xs overflow-x-auto">
+              <pre className="mt-3 p-3 bg-[var(--surface-light)] border border-[var(--border)] rounded-lg text-xs overflow-x-auto text-[var(--foreground)]">
 {`---
 title: "My Document"
 description: "Brief description"
@@ -104,7 +104,7 @@ date: "2024-11-28"
                 <li>Add a <code className="text-[var(--accent)]">page.tsx</code> with your component</li>
                 <li>Register it in <code className="text-[var(--accent)]">src/app/prototypes/page.tsx</code></li>
               </ol>
-              <pre className="mt-3 p-3 bg-[#0d0d0d] rounded-lg text-xs overflow-x-auto">
+              <pre className="mt-3 p-3 bg-[var(--surface-light)] border border-[var(--border)] rounded-lg text-xs overflow-x-auto text-[var(--foreground)]">
 {`// src/app/prototypes/my-demo/page.tsx
 export default function MyDemo() {
   return <div>Your prototype</div>

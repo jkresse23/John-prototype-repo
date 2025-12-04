@@ -27,7 +27,7 @@ export default async function DocPage({ params }: Props) {
           href="/docs" 
           className="text-sm text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
         >
-          ← Back to Documents
+          ← Back to PRDs
         </Link>
       </nav>
       

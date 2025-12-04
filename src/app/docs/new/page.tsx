@@ -118,7 +118,7 @@ date: "${new Date().toISOString().split('T')[0]}"
           href="/docs" 
           className="text-sm text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
         >
-          ← Back to Documents
+          ← Back to PRDs
         </Link>
       </nav>
 
@@ -215,7 +215,7 @@ date: "${new Date().toISOString().split('T')[0]}"
           <button
             type="submit"
             disabled={saving}
-            className="px-6 py-3 bg-[var(--accent)] text-black font-medium rounded-lg hover:bg-[var(--accent-dim)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-6 py-3 bg-[var(--accent)] text-white font-medium rounded-lg hover:bg-[var(--accent-dim)] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {saving ? 'Saving...' : 'Save Document'}
           </button>

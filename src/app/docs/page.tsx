@@ -8,14 +8,14 @@ export default async function DocsPage() {
     <div className="p-8 max-w-4xl">
       <header className="mb-8 flex items-start justify-between">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Documents</h1>
+          <h1 className="text-3xl font-bold mb-2">PRDs</h1>
           <p className="text-[var(--text-muted)]">
             PRDs, specs, and markdown notes
           </p>
         </div>
         <Link
           href="/docs/new"
-          className="flex items-center gap-2 px-4 py-2 bg-[var(--accent)] text-black font-medium rounded-lg hover:bg-[var(--accent-dim)] transition-colors"
+          className="flex items-center gap-2 px-4 py-2 bg-[var(--accent)] text-white font-medium rounded-lg hover:bg-[var(--accent-dim)] transition-colors"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
