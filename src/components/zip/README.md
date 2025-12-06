@@ -219,3 +219,5 @@ export default function MyPrototype() {
 5. **Use consistent spacing**: Leverage the `padding` prop on Cards rather than custom margins
 6. **Keep it simple**: The Zip design is clean and minimal - avoid over-styling
 
+
+
