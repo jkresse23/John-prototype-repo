@@ -24,10 +24,16 @@ export default function PasswordProtection({ children }: { children: React.React
 
   useEffect(() => {
     // Check if user is already authenticated
-    const authStatus = localStorage.getItem(AUTH_KEY)
-    if (authStatus === 'true') {
-      setIsAuthenticated(true)
+    // Only run on client side
+    if (typeof window !== 'undefined') {
+      const authStatus = localStorage.getItem(AUTH_KEY)
+      if (authStatus === 'true') {
+        setIsAuthenticated(true)
+      } else {
+        setIsAuthenticated(false)
+      }
     } else {
+      // On server, default to not authenticated
       setIsAuthenticated(false)
     }
   }, [])
