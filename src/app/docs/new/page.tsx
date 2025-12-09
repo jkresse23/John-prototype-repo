@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import CreatePrototypeFromPRDModal from '@/components/CreatePrototypeFromPRDModal'
 
 export default function NewDocPage() {
   const router = useRouter()
@@ -13,6 +14,8 @@ export default function NewDocPage() {
   const [content, setContent] = useState('')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
+  const [showPrototypeModal, setShowPrototypeModal] = useState(false)
+  const [createdDocSlug, setCreatedDocSlug] = useState<string | null>(null)
 
   const generateMarkdown = () => {
     const frontmatter = `---
@@ -58,7 +61,9 @@ date: "${new Date().toISOString().split('T')[0]}"
         return
       }
 
-      router.push(`/docs/${data.slug}`)
+      // Show prototype creation modal
+      setCreatedDocSlug(data.slug)
+      setShowPrototypeModal(true)
     } catch {
       setError('Failed to save document')
     } finally {
@@ -227,6 +232,17 @@ date: "${new Date().toISOString().split('T')[0]}"
           </Link>
         </div>
       </form>
+
+      {showPrototypeModal && createdDocSlug && (
+        <CreatePrototypeFromPRDModal
+          docSlug={createdDocSlug}
+          docTitle={title}
+          onClose={() => {
+            setShowPrototypeModal(false)
+            router.push(`/docs/${createdDocSlug}`)
+          }}
+        />
+      )}
     </div>
   )
 }

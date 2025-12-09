@@ -1,8 +1,7 @@
 import Link from 'next/link'
 
 // Add your prototypes here - each entry creates a link on this page
-const prototypes = [
-  {
+const prototypes = [{
     slug: 'cash-advance',
     title: '💵 Cash Advance',
     description: 'Cash advance flow with eligibility, amount selection, and repayment confirmation',
@@ -16,6 +15,26 @@ const prototypes = [
     slug: 'counter',
     title: 'Counter App',
     description: 'Interactive counter with state',
+  },
+  {
+    slug: 'social-proof-test-2',
+    title: 'Social Proof Test 2',
+    description: 'Prototype generated from Social Proof Test 2',
+  },
+  {
+    slug: 'social-proof-test-3',
+    title: 'Social Proof Test 3',
+    description: 'CKO and CKOA Welcome Authentication Screen with social proof A/B testing variants',
+  },
+  {
+    slug: 'sign-up-social-proof-test-5',
+    title: 'Sign up social proof test 5',
+    description: 'Prototype generated from Sign up social proof test 5',
+  },
+  {
+    slug: 'sign-up-social-proof-6',
+    title: 'Sign up social proof 6',
+    description: 'Prototype generated from Sign up social proof 6',
   },
 ]
 

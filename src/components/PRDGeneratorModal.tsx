@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import CreatePrototypeFromPRDModal from './CreatePrototypeFromPRDModal'
 
 interface PRDGeneratorModalProps {
   onClose: () => void
@@ -13,6 +14,8 @@ export default function PRDGeneratorModal({ onClose }: PRDGeneratorModalProps) {
   const [projectNotes, setProjectNotes] = useState('')
   const [generating, setGenerating] = useState(false)
   const [error, setError] = useState('')
+  const [showPrototypeModal, setShowPrototypeModal] = useState(false)
+  const [createdDocSlug, setCreatedDocSlug] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -54,9 +57,9 @@ export default function PRDGeneratorModal({ onClose }: PRDGeneratorModalProps) {
         return
       }
 
-      // Navigate to the generated PRD
-      router.push(`/docs/${data.slug}`)
-      onClose()
+      // Show prototype creation modal
+      setCreatedDocSlug(data.slug)
+      setShowPrototypeModal(true)
     } catch {
       setError('Failed to generate PRD. Please try again.')
     } finally {
@@ -156,6 +159,18 @@ export default function PRDGeneratorModal({ onClose }: PRDGeneratorModalProps) {
           </form>
         </div>
       </div>
+
+      {showPrototypeModal && createdDocSlug && (
+        <CreatePrototypeFromPRDModal
+          docSlug={createdDocSlug}
+          docTitle={projectTitle}
+          onClose={() => {
+            setShowPrototypeModal(false)
+            router.push(`/docs/${createdDocSlug}`)
+            onClose()
+          }}
+        />
+      )}
     </div>
   )
 }
