@@ -5,7 +5,14 @@ import { Button, Card, Header } from '@/components/zip'
 
 type Variant = 'control' | 'variant1' | 'variant2' | 'variant3'
 
-const socialProofVariants = {
+type VariantData = {
+  title: string
+  showSocialProof: boolean
+  socialProofText?: string
+  showPhoneChangeLink: boolean
+}
+
+const socialProofVariants: Record<Variant, VariantData> = {
   control: {
     title: 'Control - No Social Proof',
     showSocialProof: false,
@@ -85,7 +92,7 @@ export default function SocialProofTest3Prototype() {
                 }`}
               >
                 <div className="font-medium text-[#1A1A1A]">{variantData.title}</div>
-                {variantData.showSocialProof && (
+                {variantData.showSocialProof && variantData.socialProofText && (
                   <div className="text-sm text-[#666666] mt-1">{variantData.socialProofText}</div>
                 )}
               </button>
